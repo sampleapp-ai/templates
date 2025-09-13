@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import {ChatBar} from "@sampleapp.ai/sdk";
 
 export default function Home() {
   return (
@@ -49,6 +52,17 @@ export default function Home() {
           >
             Read our docs
           </a>
+        </div>
+        <div style={{width: "500px", margin: "0 auto"}}>
+          <ChatBar
+            playgroundUid="yourCompanyName"
+            height="auto"
+            typingTexts={[
+              "How do I use yourCompanyName?",
+              "What is yourCompanyName?",
+              "Build with yourCompanyName",
+            ]}
+          />
         </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
